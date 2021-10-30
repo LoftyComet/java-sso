@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "java",
+			"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput:sso-cart}",
+				"${dependencies:sso-cart}",
+				"${compileOutput:sso-login}",
+				"${dependencies:sso-login}",
+				"${compileOutput:sso-main}",
+				"${dependencies:sso-main}",
+				"${compileOutput:sso-vip}",
+				"${dependencies:sso-vip}"
+			],
+			"problemMatcher": [],
+			"label": "java: exportjar:java-sso"
+		}
+	]
+}

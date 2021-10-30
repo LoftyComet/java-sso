@@ -1,4 +1,4 @@
-package com.cqu.controller;
+package com.cqu.login.controller;
 
 import org.springframework.stereotype.Controller;
 

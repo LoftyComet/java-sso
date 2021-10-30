@@ -3,8 +3,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LoginAPP {
+public class VipApp {
     public static void main(String[] args) {
-        SpringApplication.run(LoginAPP.class, args);
+        SpringApplication.run(VipApp.class, args);
     }
 }

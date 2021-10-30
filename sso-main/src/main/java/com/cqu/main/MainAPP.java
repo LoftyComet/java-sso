@@ -1,10 +1,10 @@
-package com.cqu.login;
+package com.cqu.main;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LoginAPP {
+public class MainAPP {
     public static void main(String[] args) {
-        SpringApplication.run(LoginAPP.class, args);
+        SpringApplication.run(MainAPP.class, args);
     }
 }

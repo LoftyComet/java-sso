@@ -1,4 +1,4 @@
-package com.cqu.login.pojo;
+package com.cqu.main.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

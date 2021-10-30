@@ -1,4 +1,4 @@
-com\cqu\controller\ViewController.class
+com\cqu\login\controller\LoginController.class
 com\cqu\login\LoginAPP.class
-com\cqu\controller\LoginController.class
+com\cqu\login\controller\ViewController.class
 com\cqu\login\pojo\User.class
