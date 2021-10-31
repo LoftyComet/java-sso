@@ -18,7 +18,7 @@ public class ViewController {
     public String toLogin(@RequestParam(required = false,defaultValue = "") String target 
                                                 ,HttpSession session) {
         if (StringUtils.isEmpty(target)) {
-            target = "http://localhost:9000/view/login?target=http://localhost";
+            target = "http://localhost:9010";
         }
         // 要做target地址是否合法的检验
         // 重定向地址
