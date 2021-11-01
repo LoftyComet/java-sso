@@ -35,10 +35,12 @@ public class LoginController {
 
     @PostMapping
     public String doLogin(User user, HttpSession session, HttpServletResponse response){
+        
         String target = (String) session.getAttribute("target");
         Optional<User> first = dbUsers.stream().filter(dbUser ->dbUser.getUsername()
             .equals(user.getUsername())&&dbUser.getPassword().equals(user.getPassword()))
             .findFirst(); // 模拟数据库查询用
+
         if (first.isPresent()){
             // 保存用户登陆信息
             String token = UUID.randomUUID().toString();

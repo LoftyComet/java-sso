@@ -10,7 +10,7 @@
     <div class="login">
         <h1>cart</h1>
         <span>
-            <a th:if="${session.loginUser == null}" href="http://localhost:9000/view/login?target=http://localhost:9010/view/index">登陆</a>
+            <a th:if="${session.loginUser == null}" href="http://localhost:9000/view/login?target=http://localhost:9012/view/index">登陆</a>
             <a th:unless="${session.loginUser == null}" href="#">退出</a>
         </span>
         <p th:unless="${session.loginUser == null}">
