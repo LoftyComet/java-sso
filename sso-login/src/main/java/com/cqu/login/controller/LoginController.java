@@ -58,7 +58,7 @@ public class LoginController {
         return "redirect:" + target;
     }
 
-    @GetMapping("info")
+    @GetMapping("/info")
     @ResponseBody
     public ResponseEntity<User> getUserInfo(String token) {
         if (!StringUtils.isEmpty(token)){

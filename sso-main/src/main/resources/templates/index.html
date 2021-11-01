@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,13 @@
 <body>
     <div class="login">
         <h1>hello world</h1>
-        <a href="http://localhost:9000/view/login?target=http://localhost:9010">登陆</a>
+        <span>
+            <a th:if="${session.loginUser == null}" href="http://localhost:9000/view/login?target=http://localhost:9010/view/index">登陆</a>
+            <a th:unless="${session.loginUser == null}" href="#">退出</a>
+        </span>
+        <p th:unless="${session.loginUser == null}">
+            <span style="color: blueviolet;" th:text="${session.loginUser.username}"></span>已登录
+        </p>
     </div>
 </body>
 
