@@ -36,7 +36,7 @@ public class ViewController {
             }
         }
         
-        // 要做target地址是否合法的检验
+        // TODO target地址是否合法的检验
         // 重定向地址
         session.setAttribute("target", target); //将地址存起来
         return "login";
