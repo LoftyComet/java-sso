@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.net.*;
+import java.io.IOException;
 // 页面调整逻辑
 @Controller
 @RequestMapping("/view")
@@ -37,8 +39,38 @@ public class ViewController {
         }
         
         // TODO target地址是否合法的检验
+        boolean b = verificationUrl(target);
+
+
         // 重定向地址
         session.setAttribute("target", target); //将地址存起来
         return "login";
     }
+
+
+    // TODO target地址是否合法的函数
+    /**
+     * 验证target是否有效
+     *
+     * @param urlStr 待验证的target
+     * @return
+     */
+    public static boolean verificationUrl(String target) {
+        try {
+            URL url = new URL(target);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setConnectTimeout(3 * 1000);
+            conn.setRequestMethod("HEAD");
+            if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                return true;
+            }
+            return false;
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return false;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
 }
